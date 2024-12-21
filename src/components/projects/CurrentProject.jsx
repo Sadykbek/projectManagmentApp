@@ -24,6 +24,7 @@ const CurrentProject = () => {
     setCurrentProject({ ...currentProject, tasks: newTasks });
   }
   
+  
   return (
     <div className="mt-20 flex flex-col gap-5">
       <div className="flex justify-between">

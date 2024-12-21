@@ -28,7 +28,7 @@ function App() {
   }
   const [isCreating, setIsCreating] = useState(false);
   return (
-      <AppState.Provider value={{ projectList, addProject, newProject, currentProject, setCurrentProject , setIsCreating, deleteProject }}>
+      <AppState.Provider value={{ projectList, addProject, newProject,  currentProject, setCurrentProject , setIsCreating, deleteProject }}>
         <div className="flex h-screen mt-20">
           <Sidebar setIsCreating={setIsCreating} />
           <Projects  isCreating={isCreating}/>

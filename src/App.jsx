@@ -7,9 +7,9 @@ let id = 1;
 function App() {
 
   const [projectList, setProjectList] = useState([
-    { id:0, title: "new", description: "", date: "" }
+    { id:0, title: "new", description: "this is a new project", date: new Date().toDateString(), tasks:[{title: "task1"}] },
   ]);
-  const newProject = useRef({ title: "", description: "", date: "" });
+  const newProject = useRef({ title: "", description: "", date: "" , tasks:[]});
   const [currentProject, setCurrentProject] = useState(null);
   const addProject = () => {
     setProjectList([
@@ -19,6 +19,7 @@ function App() {
         title: newProject.current.title,
         description: newProject.current.description,
         date: newProject.current.date,
+        tasks: newProject.current.tasks
       },
     ]);
   };
